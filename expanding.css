@@ -1,0 +1,7 @@
+
+article.expanding {
+    animation: ring 2s forwards;
+}
+section.expanding {
+    animation: middleBit 2.1s forwards;
+}
