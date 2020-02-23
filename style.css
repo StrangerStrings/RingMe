@@ -23,26 +23,44 @@ main > article, main > section{
     top:50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    transition: 
-        width var(--t1) ease-in,
-        height var(--t1) ease-in
-    ;
 }
 article {
     background-color: antiquewhite;
-    width: 3vw;
-    height: 3vw;
 }
 section {
     background-color: black;
-    width: 0vw;
-    height: 0vw;
 }
-article.expandingRing {
-    width: 140vw;
-    height: 140vw;
+article.expanding {
+    animation: ring 2s forwards;
 }
-section.expandingRing {
-    width: 120vw;
-    height: 120vw;
+section.expanding {
+    animation: middleBit 2.1s forwards;
+}
+@keyframes ring{
+    0%{
+        width: 0vw;
+        height: 0vw;
+    }
+    1.5%{
+        width:  2vw;
+        height: 2vw;
+    }
+    100%{
+        width: 140vw;
+        height: 140vw
+    }
+}
+@keyframes middleBit{
+    0%{
+        width: 0vw;
+        height: 0vw;
+    }
+    1%{
+        width:  2vw;
+        height: 2vw;
+    }
+    100%{
+        width: 140vw;
+        height: 140vw
+    }
 }
